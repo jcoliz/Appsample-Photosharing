@@ -76,7 +76,7 @@ namespace PhotoSharingApp.Universal.Services
 
                 // Login with the identity provider.
                 var user = await AzureAppService.Current
-                    .LoginAsync(provider);
+                    .LoginAsync(provider,false);
 
                 // Create and store the user credentials.
                 var credential = new PasswordCredential(provider.ToString(),
